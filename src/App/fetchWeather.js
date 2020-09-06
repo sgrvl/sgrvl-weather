@@ -4,14 +4,12 @@ export const useFetchWeather = (setWeatherData) => {
 	useEffect(() => {
 		const api = {
 			key: "d892855dd51283817b1d30b7e3496f98",
-			base: "https://api.openweathermap.org/data/2.5/",
+			base: "https://api.openweathermap.org/data/2.5/weather",
 			units: "metric",
 			cityName: "Québec",
 		};
 		setWeatherData({ loading: true });
-		fetch(
-			`${api.base}/weather?q=${api.cityName}&appid=${api.key}&units=${api.units}`
-		)
+		fetch(`${api.base}?q=${api.cityName}&appid=${api.key}&units=${api.units}`)
 			.then((res) => res.json())
 			.then((data) => setWeatherData({ loading: false, data: data }))
 			.catch((err) => console.log(err));

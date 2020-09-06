@@ -22,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
 		max-width: 100vw;
 		margin: 0;
 		padding: 0;
+		color: #2b2b2b;
+		background-color: #EBC6B2;
 	}
 
   h1, h2, h3, h4, h5, h6, p, ol, ul {
@@ -50,7 +52,7 @@ const App = () => {
 				<div className="App">
 					<Header data={weatherData.data} />
 					<Top data={weatherData.data} />
-					<Bottom />
+					<Bottom data={weatherData.data} />
 				</div>
 			)}
 			<GlobalStyle />

@@ -19,7 +19,7 @@ const Icon = ({ data }) => {
 	return (
 		<Wrap>
 			<Image
-				src={require(`../../../Images/${data.weather[0].icon}.svg`)}
+				src={require(`../../Images/${data.weather[0].icon}.svg`)}
 				alt={`${data.weather[0].description} icon`}
 			/>
 			<Desc>{data.weather[0].description}</Desc>
