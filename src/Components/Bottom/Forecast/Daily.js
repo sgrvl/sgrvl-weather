@@ -8,6 +8,7 @@ const StyledDaily = styled.div`
 `;
 
 const DayWrap = styled.div`
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
@@ -32,6 +33,7 @@ const Icon = styled.img`
 const Min = styled.div`
 	grid-area: Min;
 	font-size: 0.75em;
+	color: white;
 `;
 
 const Max = styled.div`

@@ -38,19 +38,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
+	const [city, setCity] = useState("Canggu");
+	// eslint-disable-next-line no-unused-vars
 	const [weatherData, setWeatherData] = useState({
 		loading: false,
 		data: placeholder,
 	});
 
-	//useFetchWeather(setWeatherData);
+	//useFetchWeather(city, setWeatherData, setCity);
+
 	console.log(weatherData.data);
 
 	return (
 		<>
 			{weatherData.data && !weatherData.loading && (
 				<div className="App">
-					<Header data={weatherData.data} />
+					<Header data={weatherData.data} setCity={setCity} />
 					<Top data={weatherData.data} />
 					<Bottom data={weatherData.data} />
 				</div>

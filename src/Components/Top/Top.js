@@ -9,6 +9,8 @@ const StyledTop = styled.div`
 	padding-top: 35px;
 	display: grid;
 	grid-template-rows: 45% 45% 1fr;
+	justify-items: center;
+	align-items: center;
 `;
 
 const Top = ({ data }) => {

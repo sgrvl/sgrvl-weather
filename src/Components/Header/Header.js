@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Menu from "./Menu";
 import Title from "./Title";
 import Degree from "./Degree";
+import Search from "./Search";
 
 const StyledHeader = styled.div`
 	position: fixed;
@@ -13,10 +14,13 @@ const StyledHeader = styled.div`
 	justify-content: center;
 `;
 
-const Header = ({ data }) => {
+const Header = ({ data, setCity }) => {
+	const [isSearch, setIsSearch] = useState(false);
+
 	return (
 		<StyledHeader>
-			<Menu />
+			<Menu setIsSearch={setIsSearch} isSearch={isSearch} />
+			{isSearch && <Search setCity={setCity} />}
 			<Title data={data} />
 			<Degree data={data} />
 		</StyledHeader>

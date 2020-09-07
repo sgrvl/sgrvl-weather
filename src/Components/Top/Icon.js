@@ -10,6 +10,7 @@ const Wrap = styled.div`
 `;
 
 const Image = styled.img`
+	width: 100%;
 	margin-bottom: 1em;
 `;
 

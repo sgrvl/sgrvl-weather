@@ -8,9 +8,9 @@ const Bar = styled.div`
 	margin: 6px 0;
 `;
 
-const Menu = () => {
+const Menu = ({ isSearch, setIsSearch }) => {
 	return (
-		<div>
+		<div onClick={() => setIsSearch(!isSearch)}>
 			<Bar />
 			<Bar />
 			<Bar />
