@@ -42,11 +42,6 @@ const Max = styled.div`
 `;
 
 const Daily = ({ data }) => {
-	//console.log(new Date(day.dt * 1000).getDate())
-	/* data.daily
-		.slice(1)
-		.map((day) => console.log(new Date(day.dt * 1000).getDate())); */
-
 	return (
 		<StyledDaily>
 			{data.daily.slice(1).map((day) => {
